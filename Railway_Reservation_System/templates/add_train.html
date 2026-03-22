@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Train</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Add New Train</h2>
+    <form method="POST">
+        <label>Train Name:</label><br>
+        <input type="text" name="train_name" required><br><br>
+
+        <label>Source:</label><br>
+        <input type="text" name="source" required><br><br>
+
+        <label>Destination:</label><br>
+        <input type="text" name="destination" required><br><br>
+
+        <label>Total Seats:</label><br>
+        <input type="number" name="seats" min="1" required><br><br>
+
+        <input type="submit" value="Add Train">
+    </form>
+    <br>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

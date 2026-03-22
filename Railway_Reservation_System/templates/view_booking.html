@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Your Bookings</h2>
+
+<table>
+    <tr>
+        <th>Booking ID</th>
+        <th>Train Name</th>
+        <th>Seats</th>
+    </tr>
+
+    {% for b in data %}
+    <tr>
+        <td>{{ b[0] }}</td>
+        <td>{{ b[1] }}</td>
+        <td>{{ b[2] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

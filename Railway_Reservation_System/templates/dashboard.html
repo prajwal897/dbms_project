@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<a href="{{ url_for('add_train') }}" class="btn">Add New Train</a>
+<h2>Available Trains</h2>
+
+<div class="card-container">
+    {% for t in trains %}
+    <div class="card">
+        <h3>{{ t[1] }}</h3>
+        <p>{{ t[2] }} → {{ t[3] }}</p>
+        <p>Seats Available: {{ t[4] }}</p>
+        <a href="/book/{{ t[0] }}" class="btn">Book Now</a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
